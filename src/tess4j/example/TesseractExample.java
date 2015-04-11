@@ -6,8 +6,10 @@ import net.sourceforge.tess4j.*;
 public class TesseractExample {
 
     public static void main(String[] args) {
-        File imageFile = new File("eurotext.tif");
+        File imageFile = new File("lib/Tess4J/bleh.png");
         Tesseract instance = Tesseract.getInstance();  // JNA Interface Mapping
+        instance.setDatapath("lib/Tess4J");
+        instance.setLanguage("eng");
         // Tesseract1 instance = new Tesseract1(); // JNA Direct Mapping
 
         try {
